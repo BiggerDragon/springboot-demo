@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    driver: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+  port: 8080
+#  servlet:
+#    context-path: /dog
+  devtools:
+    restart:
+      enabled: true #热加载,每次代码改动都自动重启
+
+  mybatis-plus:
+    mapper-locations: classpath*:mapper/**/*Mapper.xml
+    #实体类扫描,多个package用逗号或者分号分割
+    typeAliasesPackage: com.demo.entity.*
+    global-config:
+      #主键类型 0：数据库id自增，1：用户输入id,2:全局唯一id,3:全局唯一id
+      id-type: 0
+      #字段策略 0:忽略判断，1：非NUll判断,2:非空判断
+      field-strategy: 2
+      # 驼峰下划线转换
+      db-column-underline: false
+    configuration:
+      cache-enabled: false
+      call-setters-on-nulls: true
+
+
+

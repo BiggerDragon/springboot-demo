@@ -1,0 +1,16 @@
+1.springboot从三个方面简化了spring webmvc的开发?
+    1.1 自动装配
+           1.1.1 前端控制器自动装配
+            org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration,\
+           1.1.2 web mvc 相关组件自动装配
+            org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration,\
+           1.1.3 web容器自动装配
+            org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration,\
+
+    1.2 条件状态:即满足某些条件才进行装配
+    1.3 外部化配置:WebMvcProperties,ResourcesProperties
+
+2.springMVC现在会对路径包含WEB-INF和META-INF并且视图名为html的路径进行限制，不允许访问,jsp则不会
+3.springboot resources目录下的static和templates目录
+    static:放置的是静态文件，比如静态html页面文件
+    templates:放置动态页面文件,就是需要模板引擎渲染的页面

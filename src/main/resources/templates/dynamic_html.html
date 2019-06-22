@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <script src="/jquery-2.0.0.min.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body>
+    <div>
+        <h1>这是主页</h1>
+    </div>
+    <div>
+        <label>name:</label><input id="name" name="name" type="text"/>
+        <label>age:</label><input id="age" name="age" type="number"/>
+        <button id="submit">发送一个post请求</button>
+    </div>
+    <div>
+        <span th:text="${message}"></span>
+    </div>
+
+</body>
+</html>
